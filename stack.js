@@ -12,9 +12,16 @@ const addItems = () => {
 }
 
 const deleteItem=()=>{
+  if(top===-1){
+    console.log('Stack underFlow. Cannot delete items')
+
+  }
+  else{
     console.log(`${stack[top]} deleted from the stack`);
     stack.pop()
     top--
+
+  }
 
 }
 
@@ -29,7 +36,16 @@ const mainFunction = () => {
           addItems();
           break;
         case 2:
+          if(top===-1){
+         console.log('Stack underFlow. No items to display')
+
+            }
+            else{
           console.log(stack);
+
+
+            }
+
           break;
         case 3:deleteItem()  
     }
